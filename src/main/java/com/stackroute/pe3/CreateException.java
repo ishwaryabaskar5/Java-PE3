@@ -1,6 +1,6 @@
 package com.stackroute.pe3;
 
-public class ExceptionClass {
+public class CreateException {
 	public static void main(String[] args){
 		try {
 //			int[] arr = new int[-2];			//Negative array size exception

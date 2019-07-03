@@ -6,20 +6,19 @@ import java.time.format.DateTimeFormatter;
 
 //calculates first and last date of a week
 public class DateOfWeek {
-	public void firstAndLastDate() {
+	public void firstAndLastDate(LocalDate date) {
 	
 //		Get current date
-		LocalDate today = LocalDate.now();
 		String dateFormat = "E dd/MM/yyyy";
 		
 		// Go backward to get Monday
-		LocalDate monday = today;
+		LocalDate monday = date;
 		while (monday.getDayOfWeek() != DayOfWeek.MONDAY) {
 			monday = monday.minusDays(1);
 		}
 		
 		// Go forward to get Sunday
-		LocalDate sunday = today;
+		LocalDate sunday = date;
 		while (sunday.getDayOfWeek() != DayOfWeek.SUNDAY) {
 			sunday = sunday.plusDays(1);
 		}

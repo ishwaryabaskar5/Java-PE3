@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 
 public class ConsecutiveNumbersTest {
 	
-	ConsecutiveNumbers consecutiveNumbers = null;
+	ConsecutiveNumbers consecutiveNumbers;
 	
 	@Before
 	public void setUp(){
@@ -21,19 +21,19 @@ public class ConsecutiveNumbersTest {
 	}
 	
 	@Test
-	public void  test1() {
+	public void  givenInput1ShouldReturnNonConsecutiveNumbers() {
 		String result = consecutiveNumbers.checkConsecutive("98,96,95,94,93");
 		assertEquals("98,96,95,94,93 non consecutive numbers",result);
 	}
 	
 	@Test
-	public void  test2() {
+	public void  givenInputShouldReturnConsecutiveNumbers() {
 		String result = consecutiveNumbers.checkConsecutive("54,53,52,51,50,49,48");
 		assertEquals("54,53,52,51,50,49,48 are consecutive numbers",result);
 	}
 	
 	@Test
-	public void  test3() {
+	public void  givenInput2ShouldReturnNonConsecutiveNumbers() {
 		String result = consecutiveNumbers.checkConsecutive("1,2,3,4,5,6,6");
 		assertEquals("1,2,3,4,5,6,6 non consecutive numbers",result);
 	}
