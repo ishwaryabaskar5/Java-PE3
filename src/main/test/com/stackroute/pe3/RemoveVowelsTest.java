@@ -7,7 +7,8 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
+
 
 public class RemoveVowelsTest {
 	
@@ -28,10 +29,22 @@ public class RemoveVowelsTest {
 	}
 
 	@Test
-	public void calculateDate(){
+	public void givenInputShouldReturnVowelRemovedString(){
 		removeVowels.removeVowel("India", "United States", "Germany", "Egypt", "czechoslovakia");
 		assertEquals("Place Name without Vowels:0 Ind\nPlace Name without Vowels:1 Untd Stts\nPlace Name without" +
 				" Vowels:2 Grmny\nPlace Name without Vowels:3 Egypt\nPlace Name without Vowels:4 czchslvk\n",outContent.toString());
 	}
 	
+	
+	@Test
+	public void givenInputShouldReturnSameString(){
+		removeVowels.removeVowel("dgrfty");
+		assertEquals("Place Name without Vowels:0 dgrfty\n",outContent.toString());
+	}
+	
+	@Test
+	public void givenInputShouldReturnNotNull(){
+		removeVowels.removeVowel("dgrfty");
+		assertNotNull(outContent.toString());
+	}
 }

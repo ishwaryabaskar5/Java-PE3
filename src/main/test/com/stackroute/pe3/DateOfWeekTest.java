@@ -35,4 +35,11 @@ public class DateOfWeekTest {
 		assertEquals("First Date of the Week: Mon 01/07/2019\n" +
 				"Last Date of the Week: Sun 07/07/2019\n",outContent.toString());
 	}
+	
+	@Test
+	public void givenInputShouldReturnErrorMessage(){
+		LocalDate date = null;
+		dateOfWeek.firstAndLastDate(date);
+		assertEquals("Date should not be null",outContent.toString());
+	}
 }

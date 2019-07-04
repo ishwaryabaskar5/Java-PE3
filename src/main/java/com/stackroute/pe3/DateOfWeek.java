@@ -7,7 +7,10 @@ import java.time.format.DateTimeFormatter;
 //calculates first and last date of a week
 public class DateOfWeek {
 	public void firstAndLastDate(LocalDate date) {
-	
+		if (date == null){
+			System.out.print("Date should not be null");
+			return;
+		}
 //		Get current date
 		String dateFormat = "E dd/MM/yyyy";
 		

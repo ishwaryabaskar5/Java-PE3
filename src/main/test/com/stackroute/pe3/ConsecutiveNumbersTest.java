@@ -38,4 +38,10 @@ public class ConsecutiveNumbersTest {
 		assertEquals("1,2,3,4,5,6,6 non consecutive numbers",result);
 	}
 	
+	@Test
+	public void  givenInputShouldReturnNull() {
+		String result = consecutiveNumbers.checkConsecutive(null);
+		assertNull(result);
+	}
+	
 }

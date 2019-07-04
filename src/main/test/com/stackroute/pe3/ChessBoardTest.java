@@ -28,7 +28,7 @@ public class ChessBoardTest {
 	}
 	
 	@Test
-	public void shouldReturnChessBoardPattern(){
+	public void givenInputshouldReturnChessBoardPattern(){
 		chessBoard.chessPattern();
 		assertEquals("My Chess Board\n" +
 				"WW|BB|WW|BB|WW|BB|WW|BB|\n" +

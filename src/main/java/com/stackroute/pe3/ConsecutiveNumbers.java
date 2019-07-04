@@ -5,6 +5,10 @@ public class ConsecutiveNumbers {
 
 //	accepts series of number as a string, return type string
 	public String checkConsecutive(String s){
+		
+		if (s == null){
+			return null;
+		}
 	
 //		Split a number series into individual string by splitting
 		String[] str = s.split(",");

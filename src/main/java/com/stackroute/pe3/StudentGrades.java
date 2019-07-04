@@ -16,6 +16,7 @@ public class StudentGrades {
 				return;
 			}
 		}
+		System.out.print("Thank you for entering your marks");
 		
 	}
 }
